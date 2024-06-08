@@ -1,4 +1,4 @@
-import SliderMain from "./SliderMain";
+import SliderMain from "../Home/SliderMain";
 
 export default function HomeMain() {
     return (

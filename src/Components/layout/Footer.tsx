@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Grid, Typography, Link } from '@mui/material';
 
+import logo from '../../assets/img/logo-negro.png';
+
 export default function Footer() {
     return (
         <Box component="footer">
@@ -15,9 +17,9 @@ export default function Footer() {
                     {/* Primera columna */}
                     <Grid item xs={12} sm={6} md={3}>
                         <Box textAlign="center">
-                            <img src="/logo.png" alt="Logo" style={{ width: '150px' }} />
+                            <img src={logo} alt="Logo" style={{ width: '150px' }} />
                             <Typography variant="body2" mt={2}>
-                                Información adicional de la empresa
+                                Información jeje
                             </Typography>
                             <Box mt={2}>
                                 {/* Redes sociales */}
