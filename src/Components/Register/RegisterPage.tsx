@@ -9,13 +9,7 @@ export default function RegisterPage() {
     
 
     return (
-        <Box sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '100%',
-
-         }}>
+        <Box sx={{ display: 'flex', maxHeight: '100vh', minHeight: '100vh', }}>
             <RegisterSideLeft/>
             <RegisterForm/>
         </Box>

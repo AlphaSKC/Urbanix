@@ -20,27 +20,40 @@ export default function RegisterForm() {
     return (
         <Box
             sx={{
+                flex: 1,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexDirection: 'column',
                 gap: '20px',
-                width: '100%',
                 padding: { xs: '20px', md: '40px' },
+                paddingTop: { xs: '250px' },
             }}
         >
+            <a href="" style={{ textDecoration: 'none', }}>
+                <Typography variant="h1" sx={{
+                    fontSize: { xs: '40px', sm: '50px', md: '70px' }, 
+                    display: { xs: 'block', lg: 'none' },
+                    color: '#000',
+                    fontWeight: 'bold',
+                    fontFamily: 'Poppins, sans-serif',
+                    textAlign: 'center',
+                }}>
+                    Urbanix
+                </Typography>
+            </a>
             <Box
                 sx={{
-                    background: 'rgba(19, 19, 22, 0.9)',
-                    padding: { xs: '20px', md: '40px', lg: '65px' },
+                    background: 'rgb(19, 19, 22, 90%)',
+                    padding: { xs: '20px', md: '65px' },
                     borderRadius: '30px',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
                     color: 'white',
-                    width: { xs: '90%', sm: '80%', md: '60%', lg: '45%' },
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    width: { xs: '80%', sm: '80%', md: '60%', lg: '45%' },
                 }}
             >
                 <Typography variant="h2" sx={{ fontSize: { xs: '24px', md: '30px' }, marginBottom: '10px', fontWeight: 600, fontFamily: 'Poppins, sans-serif', color: '#FAFAFA' }}>

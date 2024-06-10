@@ -4,6 +4,7 @@ export default function RegisterSideLeft() {
     return (
         <Box
             sx={{
+                width: '40%',
                 position: 'relative',
                 display: { xs: 'none', lg: 'flex' },
                 flexDirection: 'column',
@@ -12,7 +13,6 @@ export default function RegisterSideLeft() {
                 alignItems: 'left',
                 paddingLeft: '55px',
                 height: '100vh',
-                width: '70%',
                 backgroundColor: '#2C2C54',
                 overflow: 'hidden',
                 '&::before, &::after': {
