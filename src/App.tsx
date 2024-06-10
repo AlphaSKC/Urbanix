@@ -3,15 +3,33 @@ import './App.css';
 import Header from './Components/layout/Header';
 import Footer from './Components/layout/Footer';
 import HomeMain from './Components/Home/HomeMain';
+import LoginPage from './Components/Login/LoginPage';
+import RegisterPage from './Components/Register/RegisterPage';
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
 function App() {
+  const location = useLocation();
+  const hideHeaderFooter = location.pathname === '/login' || location.pathname === '/register';
+
   return (
     <>
-      <Header/>
-      <HomeMain></HomeMain>
-      <Footer/>
+      {!hideHeaderFooter && <Header />}
+      <Routes>
+        <Route path="/" element={<HomeMain />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+      </Routes>
+      {!hideHeaderFooter && <Footer />}
     </>
   );
 }
 
-export default App;
+function AppWrapper() {
+  return (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+}
+
+export default AppWrapper;
