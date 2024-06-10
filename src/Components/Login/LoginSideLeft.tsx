@@ -4,7 +4,7 @@ export default function LoginSideLeft() {
     return (
         <Box
             sx={{
-                width: '40%',
+                width: '45%',
                 position: 'relative',
                 display: { xs: 'none', lg: 'flex' },
                 flexDirection: 'column',
@@ -25,11 +25,11 @@ export default function LoginSideLeft() {
                     filter: 'blur(50px)',
                 },
                 '&::before': {
-                    top: '-20%',
-                    right: '-20%',
+                    top: '-30%',
+                    right: '-30%',
                 },
                 '&::after': {
-                    bottom: '-20%',
+                    bottom: '-40%',
                     left: '-20%',
                 },
             }}

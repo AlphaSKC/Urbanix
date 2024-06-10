@@ -39,7 +39,7 @@ export default function LoginForm() {
                     borderRadius: '30px',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
                     color: 'white',
-                    width: '45%',
+                    width: { xs: '80%', md: '50%' },
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
