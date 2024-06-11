@@ -1,7 +1,12 @@
+import { Container } from "@mui/material";
 import SliderMain from "../Home/SliderMain";
+import SuscribeForm from "./SuscribeForm";
 
 export default function HomeMain() {
     return (
-        <SliderMain></SliderMain>
+        <Container>
+            <SliderMain></SliderMain>
+            <SuscribeForm />
+        </Container>
     );
 }
