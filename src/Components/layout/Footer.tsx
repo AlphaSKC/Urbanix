@@ -54,13 +54,13 @@ export default function Footer() {
                             Shop
                         </Typography>
                         <Typography variant="body2" gutterBottom>
-                            <Link href="#" color="inherit" className='links-footer'>Site Map</Link>
+                            <Link href="#" color="inherit" className='links-title'>Site Map</Link>
                         </Typography>
                         <Typography variant="body2" gutterBottom>
-                            <Link href="#" color="inherit" className='links-footer'>Regístrate</Link>
+                            <Link href="#" color="inherit" className='links-title'>Regístrate</Link>
                         </Typography>
                         <Typography variant="body2" gutterBottom>
-                            <Link href="#" color="inherit" className='links-footer'>Iniciar Sesión</Link>
+                            <Link href="#" color="inherit" className='links-title'>Iniciar Sesión</Link>
                         </Typography>
                     </Grid>
 
@@ -70,10 +70,10 @@ export default function Footer() {
                             Nosotros
                         </Typography>
                         <Typography variant="body2" gutterBottom>
-                            <Link href="#" color="inherit" className='links-footer'>Contacto</Link>
+                            <Link href="#" color="inherit" className='links-title'>Contacto</Link>
                         </Typography>
                         <Typography variant="body2" gutterBottom>
-                            <Link href="#" color="inherit" className='links-footer'>¿Quiénes somos?</Link>
+                            <Link href="#" color="inherit" className='links-title'>¿Quiénes somos?</Link>
                         </Typography>
                     </Grid>
                 </Grid>
@@ -89,7 +89,7 @@ export default function Footer() {
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <Typography align="center">
-                            <Link className='links-footer' href="#" color="inherit">Términos y Condiciones</Link> | <Link className='links-footer' href="#" color="inherit">Aviso de Privacidad</Link>
+                            <Link className='links-title' href="#" color="inherit">Términos y Condiciones</Link> | <Link className='links-title' href="#" color="inherit">Aviso de Privacidad</Link>
                         </Typography>
                     </Grid>
                 </Grid>
