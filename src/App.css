@@ -34,14 +34,6 @@
   font-weight: bold !important;
 }
 
-.links-footer {
-  text-decoration: none !important;
-}
-
-.links-footer:hover {
-  color: #10E5A5 !important;
-}
-
 .bgImgFooter {
   text-decoration: none !important;
   border: 1px solid white !important;
@@ -61,6 +53,7 @@
     height: 2px;
     background-color: white;
     margin-top: 10px;
+    transition: width 0.3s ease;
   }
 
   &:hover::after {
@@ -75,11 +68,30 @@
   }
 }
 
-
-
 /* 
   ========= Logotipos =========
 */
 .logo-header {
   height: 100px;
+}
+
+/* 
+  ========= Index Home =========
+*/
+.title-section {
+  font-weight: bold !important;
+  color: #717171;
+  margin: 50px 0 !important;
+  font-size: 20px !important;
+  text-shadow: 1px 1px 2px #cecece !important;
+}
+
+
+.links-title {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.links-title:hover {
+  color: #10E5A5 !important;
 }
