@@ -1,74 +1,88 @@
 import React from "react";
-import Slider from "react-slick";
-import { Box, Typography } from "@mui/material";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const images = [
-  "./images/categorias/1.png",
-  "./images/categorias/2.png",
-  "./images/categorias/3.png",
-  "./images/categorias/4.png",
-  "./images/categorias/5.png",
-  "./images/categorias/6.png",
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Box, Typography } from "@mui/material";
+import "swiper/swiper-bundle.css";
+
+interface imagesCategory {
+  src: string;
+  alt: string;
+}
+
+const images: imagesCategory[] = [
+  {
+    src: "./images/categorias/1.png",
+    alt: "Category 1",
+  },
+  {
+    src: "./images/categorias/2.png",
+    alt: "Category 2",
+  },
+  {
+    src: "./images/categorias/3.png",
+    alt: "Category 3",
+  },
+  {
+    src: "./images/categorias/4.png",
+    alt: "Category 4",
+  },
+  {
+    src: "./images/categorias/5.png",
+    alt: "Category 5",
+  },
+  {
+    src: "./images/categorias/6.png",
+    alt: "Category 6",
+  },
 ];
 
 const Categories = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <Box sx={{ width: "90%", margin: "auto", marginTop: 4 }}>
       <Box sx={{ position: "relative", textAlign: "center", mb: 3 }}></Box>
-      <Slider {...settings}>
+      <Swiper
+        spaceBetween={20} // Ajusta el espacio entre los elementos
+        slidesPerView={4}
+        loop={true}
+        autoplay={{ delay: 3000 }}
+        navigation={true}
+        modules={[Navigation]}
+        breakpoints={{
+          1024: {
+            slidesPerView: 3,
+          },
+          600: {
+            slidesPerView: 2,
+          },
+          480: {
+            slidesPerView: 1,
+          },
+        }}
+        pagination={{ clickable: true }}
+      >
         {images.map((image, index) => (
-          <Box key={index} sx={{ padding: 1 }}>
-            <Box
-              component="img"
-              src={image}
-              alt={`Slide ${index}`}
-              sx={{
-                width: "90%",
-                borderRadius: 8,
-                boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
-              }}
-            />
-            <Typography variant="h6" sx={{ textAlign: "center", marginTop: 1 }}>
-              Category
-            </Typography>
-          </Box>
+          <SwiperSlide key={index}>
+            <Box sx={{ textAlign: "center", padding: "0 10px" }}>
+              <img
+                src={image.src}
+                alt={image.alt}
+                style={{
+                  borderRadius: 8,
+                  boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+              <Typography variant="h6" sx={{ mt: 1 }}>
+                {image.alt}
+              </Typography>
+            </Box>
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
     </Box>
   );
 };
