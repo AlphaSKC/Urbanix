@@ -22,10 +22,9 @@ export default function RegisterForm() {
 
     const isFormValid = nombreCompleto !== '' && correo !== '' && password !== '' && confirmPassword !== '' && telefono !== '' && correo.includes('@') && correo.includes('.') && password === confirmPassword && nombreCompleto.trim().length>0 && correo.trim().length>0 && password.trim().length>0 && confirmPassword.trim().length>0 && telefono.trim().length>0 ;
 
-  const handleTogglePasswordVisibility = () => {
-    setShowPassword((prevShowPassword) => !prevShowPassword);
-  };
-
+    const handleTogglePasswordVisibility = () => {
+        setShowPassword((prevShowPassword) => !prevShowPassword);
+    };
     const handleToggleConfirmPasswordVisibility = () => {
         setShowConfirmPassword((prevShowConfirmPassword) => !prevShowConfirmPassword);
     };
@@ -41,30 +40,18 @@ export default function RegisterForm() {
         }
     }
 
-  return (
-    <Box
-      sx={{
-        flex: 1,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        gap: "20px",
-        padding: { xs: "20px", md: "20px" },
-        paddingTop: { xs: "250px" },
-      }}
-    >
-      <a href="" style={{ textDecoration: "none" }}>
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: { xs: "40px", sm: "50px", md: "70px" },
-            display: { xs: "block", lg: "none" },
-            color: "#000",
-            fontWeight: "bold",
-            fontFamily: "Poppins, sans-serif",
-            textAlign: "center",
-          }}
+    return (
+        <Box
+            sx={{
+                flex: 1,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'column',
+                gap: '20px',
+                padding: { xs: '20px', md: '40px' },
+                paddingTop: { xs: '250px' },
+            }}
         >
             <a href="/" style={{ textDecoration: 'none', }}>
                 <Typography variant="h1" sx={{
