@@ -34,7 +34,7 @@ export default function LoginSideLeft() {
                 },
             }}
         >
-            <a href="" style={{ textDecoration: 'none' }}>
+            <a href="/" style={{ textDecoration: 'none' }}>
                 <Typography variant="h1" sx={{
                     fontSize: '70px',
                     color: 'white',
