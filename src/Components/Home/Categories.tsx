@@ -1,11 +1,13 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Box, CardActionArea, CardContent, CardMedia, Grid, Paper, Typography } from "@mui/material";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Box, Typography } from "@mui/material";
-import "swiper/swiper-bundle.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import styles from '../../assets/css/Swiper.module.css';
 
 interface imagesCategory {
   src: string;
@@ -41,44 +43,66 @@ const images: imagesCategory[] = [
 
 const Categories = () => {
   return (
-    <Box sx={{ width: "90%", margin: "auto", marginTop: 4 }}>
-      <Box sx={{ position: "relative", textAlign: "center", mb: 3 }}></Box>
+    <Box sx={{ margin: '50px 0', position: 'relative' }}>
+      {/* Encabezado */}
+      <Grid container alignItems="center">
+        <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Typography className='title-section'>
+            Encuentra cosas que te encantarán.
+          </Typography>
+          <Typography className='subtitle-section'>
+            ¡Explora las categorias!
+          </Typography>
+        </Grid>
+      </Grid>
+      {/* Botons Navigate */}
+      <div className={styles.NextCategory}>
+        <ArrowForwardIosIcon />
+      </div>
+      <div className={styles.PrevCategory}>
+        <ArrowBackIosNewIcon />
+      </div>
       <Swiper
-        spaceBetween={20} // Ajusta el espacio entre los elementos
-        slidesPerView={4}
+        spaceBetween={30}
+        slidesPerView={1}
         loop={true}
         autoplay={{ delay: 3000 }}
-        navigation={true}
+        navigation={{ nextEl: `.${styles.NextCategory}`, prevEl: `.${styles.PrevCategory}` }}
         modules={[Navigation]}
         breakpoints={{
-          1024: {
-            slidesPerView: 3,
-          },
-          600: {
+          640: {
             slidesPerView: 2,
+            spaceBetween: 20,
           },
-          480: {
-            slidesPerView: 1,
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 40,
           },
         }}
         pagination={{ clickable: true }}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <Box sx={{ textAlign: "center", padding: "0 10px" }}>
-              <img
-                src={image.src}
-                alt={image.alt}
-                style={{
-                  borderRadius: 8,
-                  boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
-                  width: "100%",
-                  height: "auto",
-                }}
-              />
-              <Typography variant="h6" sx={{ mt: 1 }}>
-                {image.alt}
-              </Typography>
+            <Box sx={{ textAlign: 'center' }}>
+              <Box sx={{ borderRadius: '20px', boxShadow: '0px 0px 10px #babecc' }}>
+                <CardActionArea sx={{ height: '100%', padding: '15px' }}>
+                  <CardMedia
+                    sx={{ height: '200px', width: '100%', objectFit: 'cover', borderRadius: '10px' }}
+                    component="img"
+                    image={image.src}
+                    alt={image.alt}
+                  />
+                </CardActionArea>
+              </Box>
+              <CardContent>
+              <Typography gutterBottom component="div" sx={{ fontSize: '18px', fontWeight: 'bold', color: '#717171' }}>
+                  {image.alt}
+                </Typography>
+              </CardContent>
             </Box>
           </SwiperSlide>
         ))}

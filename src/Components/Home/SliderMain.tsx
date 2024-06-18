@@ -21,7 +21,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import imgSlider from "../../assets/img/main-slider.png";
 import "swiper/css";
 import "swiper/css/navigation";
-import Categories from "./Categories";
 
 export default function SliderMain() {
   return (
@@ -170,7 +169,6 @@ export default function SliderMain() {
           </CardContent>
         </Card>
       </Box>
-      <Categories />
     </>
   );
 }

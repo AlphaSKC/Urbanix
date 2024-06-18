@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import { CardActionArea, Typography, CardMedia, CardContent, Card, Box, Grid, Container } from '@mui/material';
+import { CardActionArea, Typography, CardMedia, CardContent, Card, Box, Grid } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 import latestImg from '../../assets/img/latestImg.png';
