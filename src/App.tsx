@@ -6,10 +6,11 @@ import HomeMain from './Components/Home/HomeMain';
 import LoginPage from './Components/Login/LoginPage';
 import RegisterPage from './Components/Register/RegisterPage';
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import Dashboard from './Components/Admin/Layout/Dashboard';
 
 function App() {
   const location = useLocation();
-  const hideHeaderFooter = location.pathname === '/login' || location.pathname === '/register';
+  const hideHeaderFooter = location.pathname === '/login' || location.pathname === '/register' || location.pathname === '/admin';
 
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<HomeMain />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/admin" element={<Dashboard />} />
       </Routes>
       {!hideHeaderFooter && <Footer />}
     </>

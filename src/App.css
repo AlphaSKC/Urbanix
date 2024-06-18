@@ -30,16 +30,6 @@
   ========= Footer =========
 */
 
-.title-footer {
-  font-weight: bold !important;
-}
-
-.bgImgFooter {
-  text-decoration: none !important;
-  border: 1px solid white !important;
-  padding: 20px 50px;
-}
-
 .txtBgFooter {
   color: white !important;
   font-weight: bold !important;
@@ -69,6 +59,77 @@
 }
 
 /* 
+  ========= Waves Footer =========
+*/
+.boxWave{
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: white;
+  overflow: hidden;
+}
+
+.boxWave .wave{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(./assets/img/wave.png);
+  background-size: 1000px 100px;
+}
+
+.boxWave .wave.wave1{
+  animation: wave 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+.boxWave .wave.wave2{
+  animation: wave2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -10s;
+  bottom: 10px;
+}
+
+.boxWave .wave.wave3{
+  animation: wave 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -5s;
+  bottom: 15px;
+}
+
+.boxWave .wave.wave4{
+  animation: wave2 15s linear infinite;
+  z-index: 997;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+/* 
   ========= Logotipos =========
 */
 .logo-header {
@@ -81,9 +142,16 @@
 .title-section {
   font-weight: bold !important;
   color: #717171;
-  margin: 50px 0 !important;
+  margin-bottom: 10px !important;
   font-size: 20px !important;
-  text-shadow: 1px 1px 2px #cecece !important;
+  text-shadow: 1px 1px 2px #e0e0e0 !important;
+}
+
+.subtitle-section{
+  color: #9A9A9A;
+  margin-bottom: 20px !important;
+  font-size: 16px !important;
+  text-shadow: 1px 1px 2px #e0e0e0 !important;
 }
 
 

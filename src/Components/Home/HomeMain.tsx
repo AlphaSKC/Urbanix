@@ -3,11 +3,13 @@ import SliderMain from "../Home/SliderMain";
 import SuscribeForm from "./SuscribeForm";
 import UniqueSneakers from "./UniqueSneakers";
 import LatestReleases from "./LatestReleases";
+import Categories from "./Categories";
 
 export default function HomeMain() {
   return (
     <Container>
-      <SliderMain></SliderMain>
+      <SliderMain />
+      <Categories />
       <UniqueSneakers />
       <LatestReleases />
       <SuscribeForm />
