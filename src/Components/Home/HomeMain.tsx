@@ -5,12 +5,12 @@ import UniqueSneakers from "./UniqueSneakers";
 import LatestReleases from "./LatestReleases";
 
 export default function HomeMain() {
-    return (
-        <Container>
-            <SliderMain></SliderMain>
-            <UniqueSneakers/>
-            <LatestReleases />
-            <SuscribeForm />
-        </Container>
-    );
+  return (
+    <Container>
+      <SliderMain></SliderMain>
+      <UniqueSneakers />
+      <LatestReleases />
+      <SuscribeForm />
+    </Container>
+  );
 }
