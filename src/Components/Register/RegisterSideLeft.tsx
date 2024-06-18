@@ -4,7 +4,7 @@ export default function RegisterSideLeft() {
     return (
         <Box
             sx={{
-                width: '40%',
+                width: '45%',
                 position: 'relative',
                 display: { xs: 'none', lg: 'flex' },
                 flexDirection: 'column',
@@ -25,16 +25,16 @@ export default function RegisterSideLeft() {
                     filter: 'blur(50px)',
                 },
                 '&::before': {
-                    top: '-20%',
-                    right: '-20%',
+                    top: '-30%',
+                    right: '-30%',
                 },
                 '&::after': {
-                    bottom: '-20%',
+                    bottom: '-40%',
                     left: '-20%',
                 },
             }}
         >
-            <a href="" style={{ textDecoration: 'none' }}>
+            <a href="/" style={{ textDecoration: 'none' }}>
                 <Typography variant="h1" sx={{
                     fontSize: '70px',
                     color: 'white',
@@ -46,11 +46,11 @@ export default function RegisterSideLeft() {
             </a>
             <Box>
                 <Typography variant="h2" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 200, fontStyle: 'italic', fontSize: '60px', color: '#FFF', marginBottom: '1rem' }}>
-                Welcome.
+                    Welcome.
                 </Typography>
                 <Typography variant="h2" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 200, fontStyle: 'italic', fontSize: '60px', color: '#FFF' }}>
-                
-Create an account and enjoy the offers waiting for you.
+
+                    Create an account and enjoy the offers waiting for you.
                 </Typography>
             </Box>
         </Box>
