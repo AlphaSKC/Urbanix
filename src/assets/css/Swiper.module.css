@@ -1,0 +1,80 @@
+.ButtonNext {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #f2f3f4;
+    color: #5F5F5F;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #10E5A5;
+        color: white;
+        transition: 0.3s;
+    }
+}
+
+.ButtonPrev {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #f2f3f4;
+    color: #5F5F5F;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #10E5A5;
+        color: white;
+        transition: 0.3s;
+    }
+}
+
+
+.NextCategory {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #f2f3f4;
+    color: #5F5F5F;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #10E5A5;
+        color: white;
+        transition: 0.3s;
+    }
+}
+
+.PrevCategory {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #f2f3f4;
+    color: #5F5F5F;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #10E5A5;
+        color: white;
+        transition: 0.3s;
+    }
+}
