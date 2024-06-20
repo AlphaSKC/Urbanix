@@ -1,60 +1,137 @@
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 
-function createData(
-    name: string,
-    calories: number,
-    fat: number,
-    carbs: number,
-    protein: number,
-) {
-    return { name, calories, fat, carbs, protein };
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { Box, Button, Typography, Modal, TextField, Alert, Snackbar, Paper, Grid } from '@mui/material';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import { useEffect, useState } from 'react';
+import { styled } from '@mui/material/styles';
+
+interface Users {
+    pkUsuario: number;
+    nombre: string;
+    user: string;
+    password: string;
+    fkRol: number;
 }
 
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
+const CustomTextField = styled(TextField)({
+    '& label': {
+        color: 'black',
+    },
+    '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+            borderColor: 'black',
+        },
+        '&:hover fieldset': {
+            borderColor: '#1B4965',
+        },
+        '& input': {
+            color: '#1B4965',
+        }
+    }
+});
 
-export default function HomeAdmin() {
+export default function TablaDatos() {
+
+    const rows = [
+        { pkUsuario: 1, fkRol: 'Snow', tipo: 'Entrada', monto: 1400, fecha: 'Mayo, 2024 a las 15:17' },
+        { pkUsuario: 2, fkRol: 'Lannister', tipo: 'Salida', monto: 310, fecha: 'Mayo, 2024 a las 15:17' },
+        { pkUsuario: 3, fkRol: 'Lannister', tipo: 'Salida', monto: 2500, fecha: 'Mayo, 2024 a las 15:17' },
+        { pkUsuario: 4, fkRol: 'Stark', tipo: 'Salida', monto: 110, fecha: 'Mayo, 2024 a las 15:17' },
+        { pkUsuario: 5, fkRol: 'Targaryen', tipo: 'Entrada', monto: 200, fecha: 'Mayo, 2024 a las 15:17' },
+        { pkUsuario: 6, fkRol: 'Melisandre', tipo: null, monto: 1852, fecha: 'Mayo, 2024 a las 15:17' },
+        { pkUsuario: 7, fkRol: 'Clifford', tipo: 'Salida', monto: 400, fecha: 'Mayo, 2024 a las 15:17' },
+        { pkUsuario: 8, fkRol: 'Frances', tipo: 'Entrada', monto: 600, fecha: 'Mayo, 2024 a las 15:17' },
+        { pkUsuario: 9, fkRol: 'Roxie', tipo: 'Entrada', monto: 9500, fecha: 'Mayo, 2024 a las 15:17' },
+    ];
+
+    const columns: GridColDef[] = [
+        { field: 'pkUsuario', headerName: 'ID', width: 90, align: 'center', headerAlign: 'center' },
+        {
+            field: 'fkRol',
+            headerName: 'ID Rol',
+            width: 150,
+            align: 'center',
+            headerAlign: 'center',
+        },
+        {
+            field: 'nombre',
+            headerName: 'Nombre',
+            width: 150,
+            align: 'center',
+            headerAlign: 'center',
+        },
+        {
+            field: 'user',
+            headerName: 'Usuario',
+            width: 150,
+            align: 'center',
+            headerAlign: 'center',
+        },
+        {
+            field: 'actions',
+            headerName: 'Acciones',
+            width: 200,
+            align: 'center',
+            headerAlign: 'center',
+            renderCell: (params) => (
+                <strong>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        size="small"
+                        style={{ marginRight: 8, borderRadius: '20px' }}
+                    >
+                        <EditIcon />
+                    </Button>
+                    <Button
+                        variant="contained"
+                        color="error"
+                        size="small"
+                        style={{ borderRadius: '20px' }}
+                    >
+                        <DeleteIcon />
+                    </Button>
+                </strong>
+            ),
+        },
+    ];
+
     return (
-        <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Dessert (100g serving)</TableCell>
-                        <TableCell align="right">Calories</TableCell>
-                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {rows.map((row) => (
-                        <TableRow
-                            key={row.name}
-                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                        >
-                            <TableCell component="th" scope="row">
-                                {row.name}
-                            </TableCell>
-                            <TableCell align="right">{row.calories}</TableCell>
-                            <TableCell align="right">{row.fat}</TableCell>
-                            <TableCell align="right">{row.carbs}</TableCell>
-                            <TableCell align="right">{row.protein}</TableCell>
-                        </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
+        <Box sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: '25px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+        }}>
+            <Paper>
+                {/* Tabla */}
+                <Grid item xs={12} md={12} lg={12}>
+                    <Box sx={{ margin: '20px 50px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+                        <Typography><strong>Usuarios</strong></Typography>
+                        <Button variant="contained" sx={{ background: 'green' }}>
+                            Crear usuario
+                        </Button>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} md={12} lg={12}>
+                    <DataGrid
+                        rows={rows}
+                        columns={columns}
+                        getRowId={(row) => row.pkUsuario}
+                        initialState={{
+                            pagination: {
+                                paginationModel: {
+                                    pageSize: 5,
+                                },
+                            },
+                        }}
+                        pageSizeOptions={[5]}
+                    />
+                </Grid>
+            </Paper>
+        </Box>
     );
 }
