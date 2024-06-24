@@ -8,6 +8,8 @@ import RegisterPage from './Components/Register/RegisterPage';
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Dashboard from './Components/Admin/Layout/Dashboard';
 
+import HomeCategoria from './Components/Categorias/HomeCategoria';
+
 function App() {
   const location = useLocation();
   const hideHeaderFooter = location.pathname === '/login' || location.pathname === '/register' || location.pathname === '/admin';
@@ -20,6 +22,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/admin" element={<Dashboard />} />
+        <Route path="/categoria" element={<HomeCategoria />} />
       </Routes>
       {!hideHeaderFooter && <Footer />}
     </>

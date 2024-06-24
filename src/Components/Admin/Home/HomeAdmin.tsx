@@ -1,13 +1,12 @@
-import { Container } from "@mui/material";
 import DatosTotal from "./DatosTotal";
-import TablaDatos from "./TablaDatos";
+import TableProductos from "../Productos/TableProductos";
 
 
 export default function HomeAdmin() {
     return (
         <>
             <DatosTotal />
-            <TablaDatos/>
+            <TableProductos/>
         </>
     );
 }

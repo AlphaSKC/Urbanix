@@ -63,7 +63,7 @@ const Categories = () => {
         <ArrowBackIosNewIcon />
       </div>
       <Swiper
-        spaceBetween={30}
+        spaceBetween={20}
         slidesPerView={1}
         loop={true}
         autoplay={{ delay: 3000 }}
@@ -99,7 +99,7 @@ const Categories = () => {
                 </CardActionArea>
               </Box>
               <CardContent>
-              <Typography gutterBottom component="div" sx={{ fontSize: '18px', fontWeight: 'bold', color: '#717171' }}>
+                <Typography gutterBottom component="div" sx={{ fontSize: '18px', fontWeight: 'bold', color: '#717171' }}>
                   {image.alt}
                 </Typography>
               </CardContent>
