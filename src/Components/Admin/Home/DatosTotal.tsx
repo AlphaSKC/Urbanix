@@ -3,7 +3,7 @@ import { Container, Card, CardContent, CardHeader, Typography, Box, Grid, Chip, 
 
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
-export default function App() {
+export default function DatosTotal() {
     return (
         <Grid container spacing={2} marginBottom={3}>
             <Grid item xs={12} sm={12} md={3}>

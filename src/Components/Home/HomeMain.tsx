@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import SliderMain from "../Home/SliderMain";
+import SliderMain from "./SliderMain";
 import SuscribeForm from "./SuscribeForm";
 import UniqueSneakers from "./UniqueSneakers";
 import LatestReleases from "./LatestReleases";
