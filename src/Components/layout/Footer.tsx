@@ -51,10 +51,10 @@ export default function Footer() {
                                 <Link href="#" color="primary.contrastText" className='links-title'>Site Map</Link>
                             </Typography>
                             <Typography variant="body2" gutterBottom>
-                                <Link href="#" color="primary.contrastText" className='links-title'>Regístrate</Link>
+                                <Link href="/register" color="primary.contrastText" className='links-title'>Regístrate</Link>
                             </Typography>
                             <Typography variant="body2" gutterBottom>
-                                <Link href="#" color="primary.contrastText" className='links-title'>Iniciar Sesión</Link>
+                                <Link href="/login" color="primary.contrastText" className='links-title'>Iniciar Sesión</Link>
                             </Typography>
                             <Typography variant="body2" gutterBottom>
                                 <Link href="#" color="primary.contrastText" className='links-title'>Contacto</Link>

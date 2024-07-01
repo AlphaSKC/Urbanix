@@ -1,26 +1,29 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import { CardActionArea, Typography, CardMedia, CardContent, Card, Box, Grid } from '@mui/material';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { CardActionArea, Typography, CardMedia, CardContent, Card, Box, Grid, Button } from '@mui/material';
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 
 import latestImg from '../../assets/img/latestImg.png';
 import poster1 from '../../assets/img/poster1.jpg';
 import poster2 from '../../assets/img/poster2.jpg';
 
 
-const IconFav = styled(FavoriteBorderIcon)(() => ({
+const IconAddCart = styled(Button)(() => ({
     position: 'absolute',
-    top: '25px',
     zIndex: '1',
+    top: '25px',
     right: '25px',
     color: 'gray',
     borderRadius: '50%',
+    height: '50px',
+    minWidth: '50px',
     background: 'white',
     padding: '10px',
     border: '1px solid #E0E0E0',
     '&:hover': {
-        color: 'red',
-        border: '1px solid red',
+        color: 'white',
+        background: '#10E5A5',
+        border: '1px solid #10E5A5',
     },
 }));
 
@@ -51,7 +54,9 @@ export default function LatestReleases() {
                     <Card sx={{ background: '#D3FBEF' }}>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                    <ShoppingBagOutlinedIcon />
+                                </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
                                     component="img"
@@ -86,7 +91,9 @@ export default function LatestReleases() {
                     <Card sx={{ background: '#BDD7FF' }}>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                    <ShoppingBagOutlinedIcon />
+                                </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
                                     component="img"
@@ -121,7 +128,9 @@ export default function LatestReleases() {
                     <Card sx={{ background: '#D3FBEF' }}>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                    <ShoppingBagOutlinedIcon />
+                                </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
                                     component="img"
@@ -167,7 +176,9 @@ export default function LatestReleases() {
                     <Card sx={{ background: '#BDD7FF' }}>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                    <ShoppingBagOutlinedIcon />
+                                </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
                                     component="img"
@@ -202,7 +213,9 @@ export default function LatestReleases() {
                     <Card sx={{ background: '#D3FBEF' }}>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                    <ShoppingBagOutlinedIcon />
+                                </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
                                     component="img"
@@ -237,7 +250,9 @@ export default function LatestReleases() {
                     <Card sx={{ background: '#BDD7FF' }}>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                    <ShoppingBagOutlinedIcon />
+                                </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
                                     component="img"

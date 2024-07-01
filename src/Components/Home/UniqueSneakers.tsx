@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import { CardActionArea, Typography, CardMedia, CardContent, Card, Box, Grid, Link } from '@mui/material';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { CardActionArea, Typography, CardMedia, CardContent, Card, Box, Grid, Link, Button } from '@mui/material';
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -11,17 +12,22 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import styles from '../../assets/css/Swiper.module.css';
 
-const IconFav = styled(FavoriteBorderIcon)(() => ({
+const IconAddCart = styled(Button)(() => ({
     position: 'absolute',
+    zIndex: '1',
     top: '25px',
     right: '25px',
     color: 'gray',
     borderRadius: '50%',
+    height: '50px',
+    minWidth: '50px',
+    background: 'white',
     padding: '10px',
     border: '1px solid #E0E0E0',
     '&:hover': {
-        color: 'red',
-        border: '1px solid red',
+        color: 'white',
+        background: '#10E5A5',
+        border: '1px solid #10E5A5',
     },
 }));
 
@@ -35,7 +41,7 @@ export default function UniqueSneakers() {
                     </Typography>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6} textAlign="end">
-                    <Link className='links-title' color='inherit'>
+                    <Link href="/categoria" className='links-title' color='inherit'>
                         Ver todos
                         <ArrowForwardIosIcon
                         sx={{ fontSize: 'small', marginLeft: '5px'}}
@@ -74,7 +80,9 @@ export default function UniqueSneakers() {
                     <Card>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                        <ShoppingBagOutlinedIcon />
+                                    </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '300px', width: '100%', objectFit: 'cover' }}
                                     component="img"
@@ -97,7 +105,9 @@ export default function UniqueSneakers() {
                     <Card>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                        <ShoppingBagOutlinedIcon />
+                                    </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '300px', width: '100%', objectFit: 'cover' }}
                                     component="img"
@@ -120,7 +130,9 @@ export default function UniqueSneakers() {
                     <Card>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                        <ShoppingBagOutlinedIcon />
+                                    </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '300px', width: '100%', objectFit: 'cover' }}
                                     component="img"
@@ -143,7 +155,9 @@ export default function UniqueSneakers() {
                     <Card>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                        <ShoppingBagOutlinedIcon />
+                                    </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '300px', width: '100%', objectFit: 'cover' }}
                                     component="img"
@@ -166,7 +180,9 @@ export default function UniqueSneakers() {
                     <Card>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                        <ShoppingBagOutlinedIcon />
+                                    </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '300px', width: '100%', objectFit: 'cover' }}
                                     component="img"
@@ -189,7 +205,9 @@ export default function UniqueSneakers() {
                     <Card>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                        <ShoppingBagOutlinedIcon />
+                                    </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '300px', width: '100%', objectFit: 'cover' }}
                                     component="img"
@@ -212,7 +230,9 @@ export default function UniqueSneakers() {
                     <Card>
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
-                                <IconFav />
+                                <IconAddCart>
+                                        <ShoppingBagOutlinedIcon />
+                                    </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '300px', width: '100%', objectFit: 'cover' }}
                                     component="img"

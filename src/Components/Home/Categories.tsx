@@ -89,7 +89,7 @@ const Categories = () => {
           <SwiperSlide key={index}>
             <Box sx={{ textAlign: 'center' }}>
               <Box sx={{ borderRadius: '20px', boxShadow: '0px 0px 10px #babecc' }}>
-                <CardActionArea sx={{ height: '100%', padding: '15px' }}>
+                <CardActionArea href="/categoria" sx={{ height: '100%', padding: '15px' }}>
                   <CardMedia
                     sx={{ height: '200px', width: '100%', objectFit: 'cover', borderRadius: '10px' }}
                     component="img"
