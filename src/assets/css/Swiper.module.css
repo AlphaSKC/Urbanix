@@ -78,3 +78,47 @@
         transition: 0.3s;
     }
 }
+
+.NextReleated {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    padding: 15px;
+    background-color: #f2f3f4;
+    color: #5F5F5F;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: #10E5A5;
+        color: white;
+        transition: 0.3s;
+    }
+}
+
+.PrevReleated {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    padding: 15px;
+    background-color: #f2f3f4;
+    color: #5F5F5F;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: #10E5A5;
+        color: white;
+        transition: 0.3s;
+    }
+}
