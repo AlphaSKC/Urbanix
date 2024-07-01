@@ -23,7 +23,9 @@ export default function Footer() {
                     {/* Logo & Social media */}
                     <Grid item xs={12} sm={12} md={12} lg={12}>
                         <Box textAlign="center">
-                            <img src={logo} alt="Logo" style={{ width: '200px' }} />
+                            <Link href="/">
+                                <img src={logo} alt="Logo" style={{ width: '200px' }} />
+                            </Link>
                             <Box>
                                 {/* Redes sociales */}
                                 <Link href="#" color="inherit" mx={1}>
@@ -70,7 +72,7 @@ export default function Footer() {
             {/* Franja inferior */}
             <Box className="bg-main-color" py={2}>
                 <Container>
-                    <Divider sx={{ background: 'white', marginBottom:'10px' }} />
+                    <Divider sx={{ background: 'white', marginBottom: '10px' }} />
                 </Container>
                 <Grid container spacing={4} justifyContent="center">
                     <Grid item xs={12} sm={6}>
