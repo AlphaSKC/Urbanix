@@ -3,7 +3,7 @@ import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Container, D
 import StarIcon from '@mui/icons-material/Star';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 
 import latestImg from '../../assets/img/latestImg.png';
 
@@ -30,7 +30,7 @@ const BtnAddCart = styled(Button)(() => ({
     float: 'right',
     '&:hover': {
         background: '#fff',
-        color: '#10E5A5',
+        color: 'gray',
     }
 }));
 
@@ -62,7 +62,7 @@ const IconAddCart = styled(Button)(() => ({
     padding: '10px',
     border: '1px solid #E0E0E0',
     '&:hover': {
-        color: 'white',
+        color: 'black',
         background: '#10E5A5',
         border: '1px solid #10E5A5',
     },
@@ -113,7 +113,7 @@ const dataProductos = [
     },
 ];
 
-const BtnCategorie = styled(Button)(() => ({
+const BtnCategory = styled(Button)(() => ({
     color: '#7e7e7e',
     background: '#fff',
     borderRadius: '30px',
@@ -125,7 +125,7 @@ const BtnCategorie = styled(Button)(() => ({
     '&:hover': {
         background: 'rgba(16, 229, 165, 0.8)',
         border: '1px solid #10E5A5',
-        color: '#fff',
+        color: '#000',
     }
 }));
 
@@ -142,7 +142,7 @@ export default function DetalleSneaker() {
 
     return (
         <Container sx={{ marginBottom: '50px' }}>
-            {/* --- Galería, Descripcion & Formulario --- */}
+            {/* --- Galería, Formulario & Detalles --- */}
             <Grid container spacing={2} marginTop={3} marginBottom={3}>
                 {/* Galería */}
                 <Grid item xs={12} sm={12} md={8} lg={8} sx={{ background: 'red' }}>
@@ -198,7 +198,7 @@ export default function DetalleSneaker() {
                         </Grid>
                     </Box>
                 </Grid>
-                {/* Descripcion */}
+                {/* Detalles */}
                 <Grid item xs={12} sm={12} md={12} lg={12}>
                     <Divider sx={{ marginTop: '20px', marginBottom: '20px' }} />
                     <Box marginBottom={3}>
@@ -233,12 +233,12 @@ export default function DetalleSneaker() {
                     </Box>
                     <Box marginBottom={3}>
                         <Typography fontSize={20} fontWeight={600} marginBottom={2}>Categorías</Typography>
-                        <BtnCategorie>
+                        <BtnCategory href='/categoria'>
                             <AutoAwesomeOutlinedIcon sx={{ marginRight: '5px' }} /> LifeStyle
-                        </BtnCategorie>
-                        <BtnCategorie>
+                        </BtnCategory>
+                        <BtnCategory href='/categoria'>
                             <AutoAwesomeOutlinedIcon sx={{ marginRight: '5px' }} /> Air Jordan
-                        </BtnCategorie>
+                        </BtnCategory>
                     </Box>
                 </Grid>
             </Grid>
@@ -255,7 +255,7 @@ export default function DetalleSneaker() {
                         <ArrowBackIosNewIcon />
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={12}>
+                <Grid item xs={12} sm={12} md={12} lg={12} marginBottom={4}>
                     <Swiper
                         spaceBetween={30}
                         slidesPerView={1}
@@ -280,10 +280,10 @@ export default function DetalleSneaker() {
                         {dataProductos.map((product, index) => (
                             <SwiperSlide key={index}>
                                 <Card sx={{ background: '#fff', boxShadow: '2px 4px 10px rgba(189, 215, 255, 0.55)' }}>
-                                    <CardActionArea>
+                                    <CardActionArea href='/detalle'>
                                         <Box sx={{ position: 'relative' }}>
                                             <IconAddCart>
-                                                <ShoppingBagOutlinedIcon />
+                                                <LocalMallOutlinedIcon />
                                             </IconAddCart>
                                             <CardMedia
                                                 sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}

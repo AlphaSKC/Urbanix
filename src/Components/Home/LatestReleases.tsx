@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import { CardActionArea, Typography, CardMedia, CardContent, Card, Box, Grid, Button } from '@mui/material';
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 
 import latestImg from '../../assets/img/latestImg.png';
 import poster1 from '../../assets/img/poster1.jpg';
@@ -21,7 +21,7 @@ const IconAddCart = styled(Button)(() => ({
     padding: '10px',
     border: '1px solid #E0E0E0',
     '&:hover': {
-        color: 'white',
+        color: 'black',
         background: '#10E5A5',
         border: '1px solid #10E5A5',
     },
@@ -55,7 +55,7 @@ export default function LatestReleases() {
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
                                 <IconAddCart>
-                                    <ShoppingBagOutlinedIcon />
+                                    <LocalMallOutlinedIcon />
                                 </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
@@ -92,7 +92,7 @@ export default function LatestReleases() {
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
                                 <IconAddCart>
-                                    <ShoppingBagOutlinedIcon />
+                                    <LocalMallOutlinedIcon />
                                 </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
@@ -129,7 +129,7 @@ export default function LatestReleases() {
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
                                 <IconAddCart>
-                                    <ShoppingBagOutlinedIcon />
+                                    <LocalMallOutlinedIcon />
                                 </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
@@ -177,7 +177,7 @@ export default function LatestReleases() {
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
                                 <IconAddCart>
-                                    <ShoppingBagOutlinedIcon />
+                                    <LocalMallOutlinedIcon />
                                 </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
@@ -214,7 +214,7 @@ export default function LatestReleases() {
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
                                 <IconAddCart>
-                                    <ShoppingBagOutlinedIcon />
+                                    <LocalMallOutlinedIcon />
                                 </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
@@ -251,7 +251,7 @@ export default function LatestReleases() {
                         <CardActionArea>
                             <Box sx={{ position: 'relative' }}>
                                 <IconAddCart>
-                                    <ShoppingBagOutlinedIcon />
+                                    <LocalMallOutlinedIcon />
                                 </IconAddCart>
                                 <CardMedia
                                     sx={{ height: '220px', width: '100%', objectFit: 'cover', filter: 'drop-shadow(4px 4px 8px rgba(0,0,0, .3))' }}
